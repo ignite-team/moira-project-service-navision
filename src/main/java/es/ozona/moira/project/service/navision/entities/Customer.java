@@ -1,6 +1,7 @@
 package es.ozona.moira.project.service.navision.entities;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +20,7 @@ import lombok.Setter;
 @Entity
 public class Customer {
 	@Column(name = "[timestamp]")
-	private Date timestamp;
+	private Timestamp timestamp;
 	
 	@Id
 	@Column(name = "[No_]")
@@ -43,8 +44,11 @@ public class Customer {
 	@Column(name = "[City]")
 	private String city;
 	
+	@Column(name = "[Contact]")
+	private String contact;
+	
 	@Column(name = "[Phone No_]")
-	private String phoneNo;
+	private String phoneNo;//10
 	
 	@Column(name = "[Telex No_]")
 	private String telexNo;
@@ -74,7 +78,7 @@ public class Customer {
 	private String customerPostingGroup;
 	
 	@Column(name = "[Currency Code]")
-	private String currencyCode;
+	private String currencyCode;//20
 	
 	@Column(name = "[Customer Price Group]")
 	private String customerPriceGroup;
@@ -104,16 +108,52 @@ public class Customer {
 	private String placeOfExport;
 	
 	@Column(name = "[Invoice Disc_ Code]")
-	private String invoiceDiscCode;
+	private String invoiceDiscCode;//30
 	
 	@Column(name = "[Customer Disc_ Code]")
 	private String customerDiscCode;
 	
 	@Column(name = "[Country_Region Code]")
-	private String countryRegionCode;
+	private String countryRegionCode;//
+	
+	@Column(name = "[Collection Method]")
+	private String collectionMethod;
+	
+	@Column(name = "[Amount]")
+	private float amount;
+	
+	@Column(name = "[Blocked]")
+	private int blocked;
+	
+	@Column(name = "[Invoice Copies]")
+	private int invoiceCopies;
+	
+	@Column(name = "[Last Statement No_]")
+	private int lastStatementNo;
+	
+	@Column(name = "[Print Statements]")
+	private int printStatements;
+	
+	@Column(name = "[Bill-to Customer No_]")
+	private String billToCustomerNo;
+	
+	@Column(name = "[Priority]")
+	private int priority;//40
+	
+	@Column(name = "[Payment Method Code]")
+	private String paymentMethodCode;
 	
 	@Column(name = "[Last Date Modified]")
 	private Date lastDateModified;
+	
+	@Column(name = "[Application Method]")
+	private int applicationMethod;
+	
+	@Column(name = "[Prices Including VAT]")
+	private int pricesIncludingVAT;
+	
+	@Column(name = "[Location Code]")
+	private String locationCode;
 	
 	@Column(name = "[Fax No_]")
 	private String faxNo;
@@ -128,7 +168,7 @@ public class Customer {
 	private String combineShipments;
 	
 	@Column(name = "[Gen_ Bus_ Posting Group]")
-	private String genBusPostingGroup;
+	private String genBusPostingGroup;//50
 	
 	@Lob
 	@Column(name = "[Picture]")
@@ -159,7 +199,7 @@ public class Customer {
 	private int taxLiable;
 	
 	@Column(name = "[VAT Bus_ Posting Group]")
-	private String vatBusPostingGroup;
+	private String vatBusPostingGroup;//60
 	
 	@Column(name = "[Reverse]")
 	private int reverse;
@@ -189,7 +229,7 @@ public class Customer {
 	private String primaryContactNo;
 	
 	@Column(name = "[Responsability Center]")
-	private String responsabilityCenter;
+	private String responsabilityCenter;//70
 	
 	@Column(name = "[Shipping Advice]")
 	private int shippingAdvice;
@@ -219,7 +259,7 @@ public class Customer {
 	private String nonPaymntPeriodsCode;
 	
 	@Column(name = "[Not in AEAT]")
-	private int notInAEAT;
+	private int notInAEAT;//80
 	
 	@Column(name = "[Grupo riesgo cliente]")
 	private String grupoRiesgoCliente;
@@ -243,6 +283,6 @@ public class Customer {
 	private String grupoRetencionesBE;
 	
 	@Column(name = "[Income Tax withholding Code]")
-	private String incomeTaxWithholdingCode;
+	private String incomeTaxWithholdingCode;//88
 	
 }
