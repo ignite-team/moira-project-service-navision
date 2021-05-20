@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,9 +18,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "[OZONA CONSULTING, S_L_$Contact]", schema="[dbo]")
 public class Contact {
 	@Column(name = "[timestamp]")
-	private Date timestamp;
+	private byte[] timestamp;
 	
 	@Id
 	@Column(name = "[No_]")

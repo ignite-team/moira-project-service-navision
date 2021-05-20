@@ -1,10 +1,13 @@
 package es.ozona.moira.project.service.navision.entities;
 
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 
@@ -18,11 +21,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "[OZONA CONSULTING, S_L_$Customer]", schema="[dbo]")
 public class Customer {
-	@Column(name = "[timestamp]")
-	private Timestamp timestamp;
-	
 	@Id
+	@Column(name = "[timestamp]")
+	private byte[] timestamp;
+	
+
 	@Column(name = "[No_]")
 	private String no;
 	
@@ -110,8 +115,8 @@ public class Customer {
 	@Column(name = "[Invoice Disc_ Code]")
 	private String invoiceDiscCode;//30
 	
-	@Column(name = "[Customer Disc_ Code]")
-	private String customerDiscCode;
+	@Column(name = "[Customer Disc_ Group]")
+	private String customerDiscGroup;
 	
 	@Column(name = "[Country_Region Code]")
 	private String countryRegionCode;//
@@ -177,8 +182,8 @@ public class Customer {
 	@Column(name = "[Post Code]")
 	private String postCode;
 	
-	@Column(name = "[Country]")
-	private String country;
+	@Column(name = "[County]")
+	private String county;
 	
 	@Column(name = "[E-Mail]")
 	private String email;
@@ -201,8 +206,8 @@ public class Customer {
 	@Column(name = "[VAT Bus_ Posting Group]")
 	private String vatBusPostingGroup;//60
 	
-	@Column(name = "[Reverse]")
-	private int reverse;
+	@Column(name = "[Reserve]")
+	private int reserve;
 	
 	@Column(name = "[Block Payment Tolerance]")
 	private int blockPaymentTolerance;
@@ -228,8 +233,8 @@ public class Customer {
 	@Column(name = "[Primary Contact No_]")
 	private String primaryContactNo;
 	
-	@Column(name = "[Responsability Center]")
-	private String responsabilityCenter;//70
+	@Column(name = "[Responsibility Center]")
+	private String responsibilityCenter;//70
 	
 	@Column(name = "[Shipping Advice]")
 	private int shippingAdvice;
