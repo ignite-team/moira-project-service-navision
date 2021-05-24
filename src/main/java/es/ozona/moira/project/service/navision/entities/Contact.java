@@ -16,7 +16,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "[OZONA CONSULTING, S_L_$Contact]", schema="[dbo]")
 public class Contact {
